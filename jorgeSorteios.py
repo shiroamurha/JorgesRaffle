@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup as Soup
-from random import choice
+from secrets import choice
 import json
 import smtplib
 import email.message
@@ -46,7 +46,7 @@ class jorgeSorteios():
 
         # sending the email with the modified html as source/data 
         self.send_email(str(html), subject)
-    
+        #print(f'deu - {raffle}')
         
 
     def send_email(self, html, subject): 
@@ -56,7 +56,7 @@ class jorgeSorteios():
         msg['Subject'] = subject
         msg['From'] = 'JorgeSorteios.LTDA@gmail.com'
         msg['To'] = 'Jorgecarvalhoduh@gmail.com'
-        password = 'im not going to put my password here'
+        password = 'lugxcsvfumhiazwd'
 
         msg.add_header('Content-Type', 'text/html')
         msg.set_payload(html) # email content inside html param.
