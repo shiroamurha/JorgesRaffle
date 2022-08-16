@@ -13,14 +13,14 @@ class jorgeSorteios():
 
         first_applicants = [
             'Jair Bolsonaro', 'Luiz Inácio Lula da Silva', 'Ciro Gomes', 
-            'Pablo Marçal', 'José Maria Eymael'
+            'José Maria Eymael'
         ]
 
         second_applicants = ['Jair Bolsonaro', 'Luiz Inácio Lula da Silva']
 
         first_applicants_dict = {
             'Jair Bolsonaro':'bolsonaro', 'Luiz Inácio Lula da Silva':'lula', 'Ciro Gomes':'ciro', 
-            'Pablo Marçal':'pablo', 'José Maria Eymael':'eymael'
+            'José Maria Eymael':'eymael'
         }
 
         second_applicants_dict = {'Jair Bolsonaro':'bolsonaro2', 'Luiz Inácio Lula da Silva':'lula2'}
