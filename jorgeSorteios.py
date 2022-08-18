@@ -8,6 +8,18 @@ import email.message
 class jorgeSorteios():
 
     def __init__(self):
+
+        #self.todays_died_famous()
+        self.todays_election_raffle()
+
+
+
+    def todays_died_famous(self):
+        self.send_email(open('diedFamousEmail.html', 'r').read(), 'teste')
+
+        # TODO!!!!!!!!!!!!!!!!! TIRA O JORGE DE DESTINATARIO ANTES DE TESTA
+
+    def todays_election_raffle(self):
         
         # lists of the respective applicants and dicts of their respective ids
 
@@ -27,7 +39,7 @@ class jorgeSorteios():
 
         ###
 
-        html = Soup(open('email.html', 'r').read(), 'html.parser') # getting static source (html of the email)
+        html = Soup(open('electionEmail.html', 'r').read(), 'html.parser') # getting static source (html of the email)
         
         # raffling of the applicants 
         raffle = [choice(first_applicants), choice(second_applicants)]
@@ -42,12 +54,13 @@ class jorgeSorteios():
         subject = f"Sorteio número {html.find('a', attrs = {'id':'raffle'}).string}"
         
         # dumping the modified html inside email.html file
-        open('email.html', 'w').write(f'{html}')
+        open('electionEmail.html', 'w').write(f'{html}')
 
         # sending the email with the modified html as source/data 
         self.send_email(str(html), subject)
         #print(f'deu - {raffle}')
         
+
 
     def send_email(self, html, subject): 
  
